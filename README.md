@@ -15,10 +15,20 @@ Asking Chat GPT4 to write a simple Deep Learning Project
 
 ## Showcasing writing functions
 
-![alt text](img/Funtions_1.png)
+![Writing a getTime function](img/Funtions_1.png)
+
+![Writing the main function for  getTime function](img/Funtions_2.png)
 
 ## Showcasing Code Refactoring
 
+Ask GPT to write an example for me to do Code Refactor
+
+![Code Refactor Question](img/Refactoring_code_1.png)
+
+![Code Refactor Solution](img/Refactoring_code_2.png)
+
 ## Showcasing writing unit trst
+
+![Unit Test for the above code](img/Unit_Test_1.png)
 
 ## Showcasing writing the entire app
