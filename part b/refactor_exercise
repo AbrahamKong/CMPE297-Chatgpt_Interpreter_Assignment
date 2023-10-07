@@ -1,0 +1,26 @@
+// refactor question 
+
+length = 5
+width = 3
+
+# Calculate area
+area = length * width
+print(f"Area of rectangle: {area}")
+
+# Calculate perimeter
+perimeter = 2 * (length + width)
+print(f"Perimeter of rectangle: {perimeter}")
+
+
+
+// refactor solution 
+int length = 5;
+int width = 3;
+
+// Calculate area
+int area = length * width;
+System.out.println("Area of rectangle: " + area);
+
+// Calculate perimeter
+int perimeter = 2 * (length + width);
+System.out.println("Perimeter of rectangle: " + perimeter);
