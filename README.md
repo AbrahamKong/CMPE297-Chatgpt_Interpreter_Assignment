@@ -15,7 +15,7 @@ Asking Chat GPT4 to write a simple Deep Learning Project
 
 ## Showcasing writing functions
 
-![alt text](http://url/to/img.png)
+![alt text](img/Funtions_1.png)
 
 ## Showcasing Code Refactoring
 
