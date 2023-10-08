@@ -51,6 +51,5 @@ Model will generate code accordingly
 
 Code results
 
-
-
+![Code results](img/code_results.png)
 
