@@ -1,0 +1,65 @@
+To implement this API, we will use Flask, a lightweight web framework for Python. We will also use the uuid, bson, random, and string libraries to generate the different types of IDs. 
+
+Here are the core classes, functions, and methods that will be necessary:
+
+1. `app.py`: This is the entry point of our application. It will contain the Flask app and the routes for our API.
+
+2. `id_generator.py`: This file will contain the `IDGenerator` class, which will have methods for generating each type of ID.
+
+3. `requirements.txt`: This file will list all the Python packages that our application depends on.
+
+Let's start with the `app.py` file:
+
+app.py
+```python
+from flask import Flask, jsonify, request
+from id_generator import IDGenerator
+
+app = Flask(__name__)
+id_generator = IDGenerator()
+
+@app.route('/generate_id', methods=['GET'])
+def generate_id():
+    id_type = request.args.get('type', 'uuid')
+    quantity = min(int(request.args.get('quantity', 1)), 1000)
+    ids = id_generator.generate_ids(id_type, quantity)
+    return jsonify(ids)
+
+if __name__ == '__main__':
+    app.run(debug=True)
+```
+
+Next, let's create the `id_generator.py` file:
+
+id_generator.py
+```python
+import uuid
+from bson import ObjectId
+import random
+import string
+
+class IDGenerator:
+    def generate_ids(self, id_type, quantity):
+        if id_type == 'uuid':
+            return [str(uuid.uuid4()) for _ in range(quantity)]
+        elif id_type == 'objectid':
+            return [str(ObjectId()) for _ in range(quantity)]
+        elif id_type == 'numeric':
+            return [str(random.randint(0, 999999999)) for _ in range(quantity)]
+        elif id_type == 'string':
+            return [''.join(random.choices(string.ascii_letters + string.digits, k=10)) for _ in range(quantity)]
+        elif id_type == 'wep':
+            return [''.join(random.choices('0123456789ABCDEF', k=26)) for _ in range(quantity)]
+        else:
+            raise ValueError(f'Invalid ID type: {id_type}')
+```
+
+Finally, let's create the `requirements.txt` file:
+
+requirements.txt
+```
+flask==1.1.2
+pymongo==3.11.0
+```
+
+This concludes a fully working implementation.

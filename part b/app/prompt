@@ -1,0 +1,1 @@
+We are creating an API that allows users to generate random IDs of various types via a GET request. It supports: UUID, ObjectID, numeric IDs, random string IDs, and WEP keys. Users can generate either a single ID or a batch of up to 1000 IDs.

@@ -32,3 +32,25 @@ Ask GPT to write an example for me to do Code Refactor
 ![Unit Test for the above code](img/Unit_Test_1.png)
 
 ## Showcasing writing the entire app
+
+prompt is inspired by this [Youtube Tutorial](https://youtu.be/FPZONhA0C60)
+
+![Prompt](img/prompt.png)
+
+After the prompt, gpt-engineer will generate some questions to refine details
+
+![details refinement](img/gpt_1.png)
+
+Can also let gpt-engineer makes up assumption
+
+![gpt assumption](img/gpt_2.png)
+
+Model will generate code accordingly
+
+![code generated](img/code_generated.png)
+
+Code results
+
+
+
+
